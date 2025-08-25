@@ -1,0 +1,70 @@
+/* === Valve-style base theme === */
+html, body {
+  background: var(--brand-bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: var(--fw-bold); margin: 0 0 var(--space-5); }
+h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); }
+h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: var(--fw-semibold); }
+h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); font-weight: var(--fw-semibold); }
+h5 { font-size: var(--fs-h5); line-height: var(--lh-h5); font-weight: var(--fw-medium); }
+h6 { font-size: var(--fs-h6); line-height: var(--lh-h6); font-weight: var(--fw-medium); }
+
+p { font-size: var(--fs-body); line-height: var(--lh-body); margin: 0 0 var(--space-6); }
+
+a {
+  color: var(--link);
+  text-decoration: none; /* Valve.fi style: mostly non-underlined links */
+  font-weight: var(--fw-medium);
+}
+a:hover, a:focus { opacity: 0.9; }
+
+.button, button, [role="button"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.9rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-semibold);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform .02s ease, background .15s ease, opacity .15s ease;
+}
+.button:active, button:active { transform: translateY(1px); }
+
+.button--primary { background: var(--btn-primary-bg); color: var(--btn-primary-fg); }
+.button--primary:hover { background: var(--btn-primary-hover); }
+
+.button--secondary {
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-fg);
+  border-color: var(--btn-secondary-border);
+}
+.button--secondary:hover { background: var(--btn-secondary-hover-bg); }
+
+.nav { display: flex; gap: var(--space-6); align-items: center; }
+.section { padding: var(--space-9) 0; }
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+}
+
+input, select, textarea {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.9rem;
+  background: #fff;
+  color: var(--text-primary);
+  font: inherit;
+}
+input::placeholder, textarea::placeholder { color: rgba(15,22,35,0.45); }

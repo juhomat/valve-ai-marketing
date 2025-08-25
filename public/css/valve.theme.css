@@ -1,0 +1,69 @@
+/* Generated from valve-style-tokens.json */
+:root {
+  /* Brand */
+  --brand-bg: #f8f5ec;
+  --brand-fg: #0f1623;
+  --brand-accent: #0e6d7a;
+  --brand-accent-soft: #91ebc7;
+
+  /* Text */
+  --text-primary: #0f1623;
+  --text-secondary: rgba(15,22,35,0.72);
+  --text-inverse: #ffffff;
+
+  /* Surfaces */
+  --surface-1: #ffffff;
+  --border: rgba(15,22,35,0.12);
+
+  /* Interactive */
+  --link: #0e6d7a;
+  --link-hover: #0e6d7a;
+
+  /* Buttons */
+  --btn-primary-bg: #0e6d7a;
+  --btn-primary-fg: #ffffff;
+  --btn-primary-hover: #0c5a66;
+
+  --btn-secondary-bg: transparent;
+  --btn-secondary-fg: var(--brand-fg);
+  --btn-secondary-border: var(--border);
+  --btn-secondary-hover-bg: rgba(15,22,35,0.04);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 18px;
+  --space-6: 24px;
+  --space-7: 36px;
+  --space-8: 54px;
+  --space-9: 72px;
+  --space-10: 90px;
+
+  /* Typography */
+  --font-sans: "Epilogue", "Epilogue", sans-serif;
+  --fs-h1: 78px;
+  --lh-h1: 93.6px;
+  --fs-h2: 64px;
+  --lh-h2: 76.8px;
+  --fs-h3: 54px;
+  --lh-h3: 61px;
+  --fs-h4: 36px;
+  --lh-h4: 43.2px;
+  --fs-h5: 24px;
+  --lh-h5: 28.8px;
+  --fs-h6: 20px;
+  --lh-h6: 24px;
+  --fs-body: 16px;
+  --lh-body: 26.4px;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}

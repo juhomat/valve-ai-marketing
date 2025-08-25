@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valve's AI Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/valve.theme.css">
+    <link rel="stylesheet" href="/css/valve.components.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/simple-dropdown.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 class="logo">Valve's AI Marketing</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+                    <li><a href="#campaigns" class="nav-link">Campaigns</a></li>
+                    <li><a href="#analytics" class="nav-link">Analytics</a></li>
+                    <li><a href="#settings" class="nav-link">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="header-customer" id="headerCustomer" style="display: none;">
+                <div class="customer-info">
+                    <div class="customer-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="customer-details">
+                        <span class="customer-name" id="headerCustomerName">Customer Name</span>
+                        <span class="customer-website" id="headerCustomerWebsite">website.com</span>
+                    </div>
+                </div>
+                <button class="change-customer-btn" id="changeCustomerBtn" title="Change customer">
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+            </div>
+            <div class="user-profile">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Customer Selection Section -->
+            <section class="customer-selection">
+                <div class="customer-selector-container">
+                    <h3 class="customer-selector-title">Choose a customer</h3>
+                    <div class="simple-customer-dropdown">
+                        <button class="customer-trigger" id="customerTrigger">
+                            <div class="trigger-content">
+                                <i class="fas fa-building"></i>
+                                <div class="trigger-text">
+                                    <span class="selected-customer">Select a customer</span>
+                                    <span class="trigger-hint">Click to load and choose</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-down trigger-arrow"></i>
+                        </button>
+                        
+                        <div class="customer-menu" id="customerMenu">
+                            <!-- Content will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title">AI-Powered Marketing for Pilot Customers</h2>
+                    <p class="hero-subtitle">Transform your marketing strategy with intelligent automation and data-driven insights</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="process-arrow">
+                        <span class="arrow-text">Deliver<br>change<br>over<br>world</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Marketing Functions Steps -->
+            <section class="functions-steps">
+                <h3 class="section-title">What does it mean for the pilot customers?</h3>
+                
+                <div class="steps-container">
+                    <!-- Step 1: Analysis from data & insight -->
+                    <div class="step-item" data-step="1" data-function="analysis">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">1</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Analysis from data & insight</h4>
+                                    <p class="step-description">Extract valuable insights from your customer data to understand market trends and opportunities</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">Get Started</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <!-- Expandable content will go here -->
+                                <p>Detailed content for Analysis from data & insight will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Defining the target segments -->
+                    <div class="step-item" data-step="2" data-function="segments">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">2</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Defining the target segments</h4>
+                                    <p class="step-description">Identify and define specific customer segments for targeted marketing approaches</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">Define Segments</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <p>Detailed content for Defining the target segments will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Defining targets and KPI's -->
+                    <div class="step-item" data-step="3" data-function="kpis">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">3</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Defining targets and KPI's</h4>
+                                    <p class="step-description">Set measurable goals and key performance indicators for your marketing campaigns</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">Set Targets</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <p>Detailed content for Defining targets and KPI's will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Developing marketing campaigns -->
+                    <div class="step-item" data-step="4" data-function="develop-campaigns">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">4</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Developing marketing campaigns</h4>
+                                    <p class="step-description">Create compelling marketing campaigns tailored to your target audiences</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">Create Campaign</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <p>Detailed content for Developing marketing campaigns will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Executing marketing campaigns -->
+                    <div class="step-item" data-step="5" data-function="execute-campaigns">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">5</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Executing marketing campaigns</h4>
+                                    <p class="step-description">Launch and manage your marketing campaigns across multiple channels</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">Launch Campaign</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <p>Detailed content for Executing marketing campaigns will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Gathering leads & prospects -->
+                    <div class="step-item" data-step="6" data-function="leads">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">6</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-magnet"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Gathering leads & prospects</h4>
+                                    <p class="step-description">Capture and organize high-quality leads from your marketing efforts</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">Manage Leads</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <p>Detailed content for Gathering leads & prospects will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7: Developing sales activities -->
+                    <div class="step-item" data-step="7" data-function="develop-sales">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">7</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-strategy"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Developing sales activities</h4>
+                                    <p class="step-description">Design effective sales strategies and activities to convert leads</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">Plan Sales</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <p>Detailed content for Developing sales activities will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 8: Executing sales activities -->
+                    <div class="step-item" data-step="8" data-function="execute-sales">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">8</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Executing sales activities</h4>
+                                    <p class="step-description">Implement sales activities and track progress toward closing deals</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">Execute Sales</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <p>Detailed content for Executing sales activities will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 9: Signing deals (eventually) -->
+                    <div class="step-item" data-step="9" data-function="deals">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">9</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-pen-to-square"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Signing deals (eventually)</h4>
+                                    <p class="step-description">Close deals and convert prospects into paying customers</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">Close Deals</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <p>Detailed content for Signing deals (eventually) will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 10: Measuring every phase -->
+                    <div class="step-item" data-step="10" data-function="measurement">
+                        <div class="step-header">
+                            <div class="step-left">
+                                <div class="step-number">10</div>
+                                <div class="step-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h4 class="step-title">Measuring every phase</h4>
+                                    <p class="step-description">Monitor and analyze performance across all marketing and sales phases</p>
+                                </div>
+                            </div>
+                            <div class="step-right">
+                                <button class="step-btn">View Analytics</button>
+                                <button class="expand-btn" aria-label="Expand step">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-content-inner">
+                                <p>Detailed content for Measuring every phase will be added in the next step.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3 class="stat-number">85%</h3>
+                        <p class="stat-label">Lead Conversion Rate</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">2.3x</h3>
+                        <p class="stat-label">ROI Improvement</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">50%</h3>
+                        <p class="stat-label">Time Savings</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">120+</h3>
+                        <p class="stat-label">Active Campaigns</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Valve's AI Marketing</h4>
+                    <p>Intelligent marketing automation for modern businesses</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Valve</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Valve's AI Marketing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/utils/httpClient.js"></script>
+    <script src="/js/customer-dropdown.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
