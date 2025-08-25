@@ -344,24 +344,7 @@ body {
     flex-shrink: 0;
 }
 
-.step-btn {
-    background: var(--btn-primary-bg);
-    color: var(--btn-primary-fg);
-    border: none;
-    padding: var(--space-3) var(--space-6);
-    border-radius: var(--radius-md);
-    font-weight: var(--fw-semibold);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: var(--fs-body);
-    white-space: nowrap;
-}
 
-.step-btn:hover {
-    background: var(--btn-primary-hover);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
-}
 
 .expand-btn {
     background: transparent;

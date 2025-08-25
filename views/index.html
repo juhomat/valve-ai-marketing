@@ -105,7 +105,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">Get Started</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
@@ -113,10 +112,43 @@
                         </div>
                         <div class="step-content">
                             <div class="step-content-inner">
-                                <!-- Expandable content will go here -->
-                                <p>Detailed content for Analysis from data & insight will be added in the next step.</p>
-                            </div>
+                                <div class="analysis-content" id="analysisContent">
+                                    <div class="analysis-section">
+                                        <h5 class="analysis-title">
+                                            <i class="fas fa-globe"></i>
+                                            Website Analysis
+                                        </h5>
+                                        <div class="website-status" id="websiteStatus">
+                                            <div class="status-item">
+                                                <span class="status-label">Customer Website:</span>
+                                                <span class="status-value" id="customerWebsite">Select a customer first</span>
+                                            </div>
+                                            <div class="status-item">
+                                                <span class="status-label">Indexing Status:</span>
+                                                <span class="status-value" id="indexingStatus">
+                                                    <span class="status-badge pending">Pending Analysis</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="analysis-description">
+                                            <p>Website indexing determines whether your customer's website has been analyzed and indexed in our system for AI-powered insights and recommendations.</p>
+                                        </div>
+                                                                <div class="analysis-actions">
+                            <button class="index-website-btn" id="indexWebsiteBtn" disabled>
+                                <i class="fas fa-search"></i>
+                                Index Website
+                            </button>
+                            <span class="action-note">Select a customer to enable indexing</span>
                         </div>
+                    </div>
+                    
+                    <!-- Website Information Container -->
+                    <div class="website-info-container" id="websiteInfoContainer" style="display: none;">
+                        <!-- Website info will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
                     </div>
 
                     <!-- Step 2: Defining the target segments -->
@@ -133,7 +165,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">Define Segments</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
@@ -160,7 +191,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">Set Targets</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
@@ -187,7 +217,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">Create Campaign</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
@@ -214,7 +243,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">Launch Campaign</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
@@ -241,7 +269,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">Manage Leads</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
@@ -268,7 +295,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">Plan Sales</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
@@ -295,7 +321,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">Execute Sales</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
@@ -322,7 +347,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">Close Deals</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>
@@ -349,7 +373,6 @@
                                 </div>
                             </div>
                             <div class="step-right">
-                                <button class="step-btn">View Analytics</button>
                                 <button class="expand-btn" aria-label="Expand step">
                                     <i class="fas fa-chevron-down"></i>
                                 </button>

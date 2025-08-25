@@ -48,17 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const stepItems = document.querySelectorAll('.step-item');
     
     stepItems.forEach(step => {
-        const stepBtn = step.querySelector('.step-btn');
         const expandBtn = step.querySelector('.expand-btn');
         const stepHeader = step.querySelector('.step-header');
-        
-        // Add click handler for step action buttons
-        stepBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const functionType = step.getAttribute('data-function');
-            handleStepAction(functionType, step);
-        });
         
         // Add click handler for expand buttons and headers
         function toggleStep(e) {
@@ -92,11 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         expandBtn.addEventListener('click', toggleStep);
         stepHeader.addEventListener('click', toggleStep);
-        
-        // Prevent step button from triggering expand
-        stepBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
     });
 
     // Navigation active state
@@ -110,32 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Handle step action button clicks
-    function handleStepAction(functionType, stepElement) {
-        // Add loading state
-        const btn = stepElement.querySelector('.step-btn');
-        const originalText = btn.textContent;
-        btn.textContent = 'Loading...';
-        btn.disabled = true;
-        
-        // Add visual feedback
-        stepElement.style.borderColor = 'var(--primary-blue)';
-        stepElement.style.boxShadow = 'var(--shadow-xl)';
-        
-        // Simulate API call or navigation
-        setTimeout(() => {
-            // Reset button state
-            btn.textContent = originalText;
-            btn.disabled = false;
-            stepElement.style.borderColor = '';
-            stepElement.style.boxShadow = '';
-            
-            // Show success feedback
-            const stepNumber = stepElement.getAttribute('data-step');
-            const stepTitle = stepElement.querySelector('.step-title').textContent;
-            showNotification(`Step ${stepNumber}: ${stepTitle} - Module will be available soon!`, 'info');
-        }, 1000);
-    }
+
 
     // Keyboard navigation for steps
     document.addEventListener('keydown', function(e) {
